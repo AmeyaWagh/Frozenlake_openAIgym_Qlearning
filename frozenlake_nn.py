@@ -26,10 +26,10 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def debug(*message):
-    print bcolors.WARNING+"[debug message]"
+    print bcolors.WARNING+"[debug]",
     for msg in message:
-        print msg
-    print "[done]"+bcolors.ENDC
+        print msg,
+    print bcolors.ENDC
 
 class ReplayBuffer():
     def __init__(self,buffer_size=40):
